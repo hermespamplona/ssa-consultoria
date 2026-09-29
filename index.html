@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Assessoria e consultoria especializada para a Administração Pública: Elaboração de PPA, LDO e LOA, acompanhamento da execução orçamentária e financeira, análise de dados e apoio estratégico na tomada de decisões.">
+  <meta name="keywords" content="administração pública, PPA, LDO, LOA, execução orçamentária, inteligência fiscal, Lei de Responsabilidade Fiscal, LRF, consultoria pública, gestão municipal">
+  <meta name="author" content="SSA CONPLAN - Consultoria e Planejamento Ltda">
+  <meta name="theme-color" content="#0d2e54">
+
+  <!-- Open Graph / Redes Sociais -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="SSA  - Consultoria e Planejamento Ltda | Planejamento, Execução e Inteligência Orçamentária">
+  <meta property="og:description" content="Soluções completas para prefeituras e órgãos públicos: Peças de Planejamento (PPA, LDO, LOA), Acompanhamento Fiscal e Business Intelligence para Gestores.">
+  <meta property="og:locale" content="pt_BR">
+
+  <title>SSA CONPLAN - Consultoria e Planejamento Ltda | Planejamento Orçamentário (PPA, LDO, LOA), Execução Fiscal e Inteligência de Dados</title>
+
+  <!-- Google Fonts: Inter e Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Folha de Estilos Principal -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Link de Acessibilidade para Navegação por Teclado -->
+  <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
+
+  <!-- ========================================================================
+       BARRA SUPERIOR DE INFORMAÇÕES E ACESSIBILIDADE
+       ======================================================================== -->
+  <aside class="top-bar" aria-label="Informações de Contato Rápido e Acessibilidade">
+    <div class="container">
+      <div class="top-bar-info">
+        <span class="top-bar-item">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          </svg>
+          Atendimento a Órgãos Públicos: <a href="tel:08007722026">(0800) 772-2026</a>
+        </span>
+        <span class="top-bar-item">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+          <a href="mailto:contato@ssagestaopublica.com.br">contato@ssagestaopublica.com.br</a>
+        </span>
+      </div>
+      
+      <div class="accessibility-controls" aria-label="Ferramentas de Acessibilidade">
+        <span>Acessibilidade:</span>
+        <button type="button" id="toggle-contrast" class="btn-a11y" aria-pressed="false" title="Alternar Alto Contraste">
+          Alto Contraste
+        </button>
+        <button type="button" id="font-decrease" class="btn-a11y" aria-label="Diminuir tamanho da fonte" title="Diminuir Fonte">A-</button>
+        <button type="button" id="font-increase" class="btn-a11y" aria-label="Aumentar tamanho da fonte" title="Aumentar Fonte">A+</button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ========================================================================
+       CABEÇALHO PRINCIPAL E NAVEGAÇÃO
+       ======================================================================== -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <!-- Logotipo Institucional -->
+      <a href="#inicio" class="logo" aria-label="SSA CONPLAN - Consultoria e Planejamento Ltda - Página Inicial">
+        <div class="logo-icon" aria-hidden="true" style="display: flex; align-items: center; justify-content: center; width: 48px; height: 48px;">
+          <!-- Substituição segura usando a sua imagem sem quebrar o layout -->
+          <img src="img/Logo_SSA.png" alt="Logo SSA CONPLAN" style="width: 100%; height: 100%; object-fit: contain;">
+        </div>
+        <div class="logo-text">
+          <span class="logo-title">SSA Consultoria e Planejamento </span>
+          <span class="logo-tagline">Governança &amp; Inteligência Pública</span>
+        </div>
+      </a>
+
+      <!-- Botão Menu Mobile -->
+      <button class="menu-toggle" type="button" aria-controls="menu-principal" aria-expanded="false" aria-label="Abrir Menu de Navegação">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+
+      <!-- Menu Principal de Navegação Semântica -->
+      <nav class="main-nav" id="menu-principal" aria-label="Navegação Principal do Site">
+        <ul class="nav-list">
+          <li><a href="#inicio" class="nav-link">Início</a></li>
+          <li><a href="#sobre" class="nav-link">Sobre</a></li>
+          <li><a href="#servicos" class="nav-link">Serviços</a></li>
+          <li><a href="#ciclo-orcamentario" class="nav-link">Ciclo Orçamentário</a></li>
+          <li><a href="#metodologia" class="nav-link">Metodologia</a></li>
+          <li><a href="#faq" class="nav-link">Dúvidas</a></li>
+          <li><a href="#contato" class="btn-nav-cta">Diagnóstico Fiscal</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       CONTEÚDO PRINCIPAL (MAIN)
+       ======================================================================== -->
+  <main id="conteudo-principal" tabindex="-1">
+
+    <!-- ----------------------------------------------------------------------
+         HERO SECTION (APRESENTAÇÃO PRINCIPAL)
+         ---------------------------------------------------------------------- -->
+    <section id="inicio" class="hero" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="tag-label">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+            Segurança Jurídica &amp; Eficiência Fiscal
+          </div>
+          <h1 id="hero-title" class="hero-title">
+            Inteligência Orçamentária e Planejamento para a <span class="highlight">Administração Pública</span>
+          </h1>
+          <p class="hero-description">
+            Apoiamos prefeitos, secretários e equipes técnicas na elaboração de <strong>PPA, LDO e LOA</strong>, no acompanhamento rigoroso da <strong>execução orçamentária e financeira</strong> e na <strong>análise estratégica de dados</strong> para tomadas de decisões seguras e em conformidade com a LRF.
+          </p>
+          <div class="hero-actions">
+            <a href="#servicos" class="btn btn-primary">
+              Nossos Serviços Especializados
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="#ciclo-orcamentario" class="btn btn-outline">
+              Simulador do Ciclo Orçamentário
+            </a>
+          </div>
+
+          <div class="hero-badges">
+            <div class="hero-badge-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Conformidade com a LRF (LC 101/2000)</span>
+            </div>
+            <div class="hero-badge-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Aderência aos Tribunais de Contas (TCE / TCU)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Painel Visual Interativo / Mockup de BI de Gestão Fiscal -->
+        <div class="hero-visual" aria-hidden="true">
+          <aside class="hero-card">
+            <div class="hero-card-header">
+              <div class="hero-card-title">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary-600)" stroke-width="2">
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="3" y1="9" x2="21" y2="9"></line>
+                  <line x1="9" y1="21" x2="9" y2="9"></line>
+                </svg>
+                Painel do Gestor Público • Execução 2026
+              </div>
+              <span class="live-indicator">
+                <span class="live-dot"></span> Monitoramento Ativo
+              </span>
+            </div>
+
+            <!-- KPIs de Limites Constitucionais e Fiscais -->
+            <div class="kpi-grid">
+              <div class="kpi-box">
+                <div class="kpi-box-title">Aplicação em Saúde</div>
+                <div class="kpi-box-value">18,4%</div>
+                <div class="kpi-box-sub">Mínimo Constitucional: 15,0%</div>
+                <div class="kpi-bar">
+                  <div class="kpi-bar-fill" style="width: 85%;"></div>
+                </div>
+              </div>
+
+              <div class="kpi-box">
+                <div class="kpi-box-title">Aplicação em Educação</div>
+                <div class="kpi-box-value">26,8%</div>
+                <div class="kpi-box-sub">Mínimo Constitucional: 25,0%</div>
+                <div class="kpi-bar">
+                  <div class="kpi-bar-fill" style="width: 78%;"></div>
+                </div>
+              </div>
+
+              <div class="kpi-box">
+                <div class="kpi-box-title">Despesa com Pessoal</div>
+                <div class="kpi-box-value">48,2%</div>
+                <div class="kpi-box-sub">Limite Máximo LRF: 54,0%</div>
+                <div class="kpi-bar">
+                  <div class="kpi-bar-fill" style="width: 62%;"></div>
+                </div>
+              </div>
+
+              <div class="kpi-box">
+                <div class="kpi-box-title">Eficiência de Arrecadação</div>
+                <div class="kpi-box-value">+14,6%</div>
+                <div class="kpi-box-sub">Superávit Primário Projetado</div>
+                <div class="kpi-bar">
+                  <div class="kpi-bar-fill" style="width: 90%;"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Mini Linha do Tempo de Peças Orçamentárias -->
+            <div class="hero-timeline-mini">
+              <div class="timeline-mini-title">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+                Tríade do Planejamento Orçamentário Municipal
+              </div>
+              <div class="timeline-mini-steps">
+                <div class="timeline-mini-step active">
+                  <div class="timeline-mini-badge">1</div>
+                  <span class="timeline-mini-label">PPA (4 anos)</span>
+                </div>
+                <div class="timeline-mini-step active">
+                  <div class="timeline-mini-badge">2</div>
+                  <span class="timeline-mini-label">LDO (Diretrizes)</span>
+                </div>
+                <div class="timeline-mini-step active">
+                  <div class="timeline-mini-badge">3</div>
+                  <span class="timeline-mini-label">LOA (Orçamento)</span>
+                </div>
+                <div class="timeline-mini-step active">
+                  <div class="timeline-mini-badge">4</div>
+                  <span class="timeline-mini-label">Execução &amp; BI</span>
+                </div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ----------------------------------------------------------------------
+         SEÇÃO DE MÉTRICAS E INDICADORES DE CONFIABILIDADE
+         ---------------------------------------------------------------------- -->
+    <section class="metrics-section" aria-label="Indicadores Institucionais da Consultoria">
+      <div class="container">
+        <div class="metrics-grid">
+          <div class="metric-item">
+            <p class="metric-number">+ R$ 4,2 Bi</p>
+            <p class="metric-label">Em orçamentos públicos assessorados e executados</p>
+          </div>
+          <div class="metric-item">
+            <p class="metric-number">100%</p>
+            <p class="metric-label">De aprovação de contas nos Tribunais com nosso suporte</p>
+          </div>
+          <div class="metric-item">
+            <p class="metric-number">+ 480</p>
+            <p class="metric-label">Peças de PPA, LDO e LOA tecnicamente estruturadas</p>
+          </div>
+          <div class="metric-item">
+            <p class="metric-number">+ 75</p>
+            <p class="metric-label">Municípios e autarquias públicas transformados</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ----------------------------------------------------------------------
+         SEÇÃO SOBRE NÓS E VALORES REPUBLICANOS
+         ---------------------------------------------------------------------- -->
+    <section id="sobre" class="section section-alt" aria-labelledby="sobre-title">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-content">
+            <span class="tag-label">Sobre Nossa Consultoria</span>
+            <h2 id="sobre-title" class="section-title">Vocação para a Gestão Pública Eficiente, Transparente e Responsável</h2>
+            <p>
+              A <strong>SSA CONPLAN - Consultoria e Planejamento Ltda</strong> nasceu para suprir um dos maiores desafios dos municípios e estados brasileiros: transformar obrigações contábeis e fiscais complexas em <em>instrumentos vivos de governança, desenvolvimento social e tomada de decisão estratégica</em>.
+            </p>
+            <p>
+              Composta por especialistas em finanças públicas, contabilidade aplicada ao setor público (MCASP), direito financeiro e cientistas de dados, nossa equipe atua lado a lado com os gestores, blindando o mandato contra apontamentos dos órgãos de controle externo.
+            </p>
+
+            <div class="principles-list">
+              <div class="principle-card">
+                <h4>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 14 14"></polyline>
+                  </svg>
+                  Legalidade &amp; LRF
+                </h4>
+                <p>Cumprimento estrito da LC 101/2000, Lei 4.320/64 e da Constituição Federal.</p>
+              </div>
+
+              <div class="principle-card">
+                <h4>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                  </svg>
+                  Inteligência de Dados
+                </h4>
+                <p>Transformação de planilhas orçamentárias em diagnósticos gráficos preditivos.</p>
+              </div>
+
+              <div class="principle-card">
+                <h4>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                  </svg>
+                  Participação Popular
+                </h4>
+                <p>Metodologias dinâmicas para condução de Audiências Públicas do PPA e LDO.</p>
+              </div>
+
+              <div class="principle-card">
+                <h4>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                  </svg>
+                  Equilíbrio Fiscal
+                </h4>
+                <p>Gestão prudencial de caixa, restos a pagar e limites de gastos com folha.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-visual">
+            <blockquote class="about-card-box">
+              <p class="about-quote">
+                "O orçamento público não é apenas uma peça burocrática exigida por lei: é a expressão máxima do plano de governo e o compromisso moral e legal da administração com a sociedade."
+              </p>
+              <footer class="about-author">
+                Hermes Pamplona
+                <div class="about-role">Diretor Técnico &amp; Especialista em Finanças Públicas</div>
+              </footer>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ----------------------------------------------------------------------
+         SEÇÃO DE SERVIÇOS ESPECIALIZADOS (ARTICLES SEMÂNTICOS)
+         ---------------------------------------------------------------------- -->
+    <section id="servicos" class="section" aria-labelledby="servicos-title">
+      <div class="container">
+        <header class="section-header">
+          <span class="tag-label">Soluções para o Setor Público</span>
+          <h2 id="servicos-title" class="section-title">Nossos Serviços Especializados para a Gestão Pública</h2>
+          <p class="section-subtitle">
+            Atuação técnica abrangente que cobre todo o ciclo das finanças públicas municipais e estaduais — desde o planejamento orçamentário até a prestação de contas definitiva.
+          </p>
+        </header>
+
+        <div class="services-grid">
+          <!-- Serviço 1: Peças de Planejamento (PPA, LDO e LOA) -->
+          <article class="service-card featured">
+            <span class="service-featured-badge">Serviço Essencial</span>
+            <div class="service-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+              </svg>
+            </div>
+            <h3 class="service-title">Elaboração de Peças de Planejamento (PPA, LDO e LOA)</h3>
+            <p class="service-desc">
+              Assessoria integral na concepção técnica, metodológica e legal das três peças que estruturam o orçamento do ente público, garantindo harmonia entre plano de governo e capacidade real de arrecadação.
+            </p>
+            <div class="service-features">
+              <div class="service-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>PPA:</strong> Programas temáticos, indicadores e metas físicas e financeiras quadrieniais.</span>
+              </div>
+              <div class="service-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>LDO:</strong> Anexo de Metas Fiscais, Riscos Fiscais e regras de contingenciamento.</span>
+              </div>
+              <div class="service-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>LOA:</strong> Estimativa de receita, fixação de despesa e emendas impositivas.</span>
+              </div>
+              <div class="service-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Condução técnica de Audiências Públicas participativas obrigatórias.</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Serviço 2: Acompanhamento da Execução Orçamentária e Financeira -->
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="12" y1="1" x2="12" y2="23"></line>
+                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+              </svg>
+            </div>
+            <h3 class="service-title">Acompanhamento da Execução Orçamentária e Financeira</h3>
+            <p class="service-desc">
+              Monitoramento permanente dos estágios da despesa pública (empenho, liquidação e pagamento) e da arrecadação de receitas, assegurando liquidez e obediência ao cronograma de desembolso.
+            </p>
+            <div class="service-features">
+              <div class="service-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Acompanhamento sistemático do RREO (Bimestral) e RGF (Quadrimestral).</span>
+              </div>
+              <div class="service-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Vigilância contínua dos índices de Saúde (15%) e Educação (25% e Fundeb 70%).</span>
+              </div>
+              <div class="service-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Gestão preventiva e saneamento de Restos a Pagar e disponibilidades de caixa.</span>
+              </div>
+              <div class="service-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Controle rigoroso do Art. 42 da LRF no último ano de mandato.</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Serviço 3: Análise de Dados e Inteligência Fiscal -->
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="18" y1="20" x2="18" y2="10"></line>
+                <line x1="12" y1="20" x2="12" y2="4"></line>
+                <line x1="6" y1="20" x2="6" y2="14"></line>
+              </svg>
+            </div>
+            <h3 class="service-title">Análise de Dados Fiscais &amp; Business Intelligence</h3>
+            <p class="service-desc">
+              Transformação de dados contábeis dispersos em dashboards dinâmicos e inteligência preditiva. Identifique antecipadamente quedas no FPM/ICMS e gaps na arrecadação própria.
+            </p>
+            <div class="service-features">
+              <div class="service-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Painéis visuais em tempo real para Prefeitos e Secretários de Finanças.</span>
+              </div>
+              <div class="service-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Modelos preditivos de receita para mitigar frustrações orçamentárias.</span>
+              </div>
+              <div class="service-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Cruzamento inteligente de dados tributários municipais (IPTU, ISS, ITBI).</span>
+              </div>
+              <div class="service-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Alertas automáticos de risco de extrapolação de limites fiscais.</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Serviço 4: Apoio Estratégico à Tomada de Decisão -->
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                <line x1="12" y1="17" x2="12.01" y2="17"></line>
+              </svg>
+            </div>
+            <h3 class="service-title">Apoio Estratégico à Tomada de Decisão do Gestor</h3>
+            <p class="service-desc">
+              Consultoria técnica de alto nível para amparar decisões complexas de investimento, concessão de benefícios fiscais, reajustes salariais e abertura de créditos adicionais.
+            </p>
+            <div class="service-features">
+              <div class="service-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Emissão de Notas Técnicas conclusivas para ordenadores de despesa.</span>
+              </div>
+              <div class="service-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Estudos de Impacto Orçamentário e Financeiro (Art. 16 e 17 da LRF).</span>
+              </div>
+              <div class="service-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Avaliação de viabilidade de contratação de operações de crédito.</span>
+              </div>
+              <div class="service-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Defesa técnica preventiva em diligências do Tribunal de Contas.</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Serviço 5: Créditos Adicionais e Remanejamento Orçamentário -->
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+              </svg>
+            </div>
+            <h3 class="service-title">Abertura e Gestão de Créditos Adicionais</h3>
+            <p class="service-desc">
+              Estruturação formal e legal de Projetos de Lei e Decretos de abertura de créditos suplementares, especiais e extraordinários, com apuração técnica das fontes legais de custeio.
+            </p>
+            <div class="service-features">
+              <div class="service-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Cálculo preciso do Superávit Financeiro do exercício anterior.</span>
+              </div>
+              <div class="service-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Demonstrativo do Excesso de Arrecadação por fonte de recurso.</span>
+              </div>
+              <div class="service-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Minutas de Decretos e Justificativas de Projetos de Lei orçamentários.</span>
+              </div>
+              <div class="service-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Prevenção de transposição e remanejamento inconstitucional (Art. 167 da CF).</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Serviço 6: Capacitação de Servidores e Controle Interno -->
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+              </svg>
+            </div>
+            <h3 class="service-title">Capacitação Técnica &amp; Controle Interno</h3>
+            <p class="service-desc">
+              Treinamento prático in company ou online para servidores municipais que atuam nos setores de planejamento, contabilidade, compras, patrimônio e controle interno.
+            </p>
+            <div class="service-features">
+              <div class="service-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Workshops sobre o novo Manual de Contabilidade Aplicada ao Setor Público.</span>
+              </div>
+              <div class="service-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Estruturação de rotinas de auditoria preventiva no Controle Interno.</span>
+              </div>
+              <div class="service-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Alinhamento com a Nova Lei de Licitações (Lei 14.133/2021).</span>
+              </div>
+              <div class="service-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Transferência de conhecimento contínuo e autonomia para a equipe pública.</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ----------------------------------------------------------------------
+         FERRAMENTA INTERATIVA: GUIA E SIMULADOR DO CICLO ORÇAMENTÁRIO
+         ---------------------------------------------------------------------- -->
+    <section id="ciclo-orcamentario" class="section section-blue" aria-labelledby="ciclo-title">
+      <div class="container">
+        <header class="section-header">
+          <span class="tag-label">Ferramenta Interativa para Gestores</span>
+          <h2 id="ciclo-title" class="section-title">Guia Prático do Ciclo Orçamentário Municipal</h2>
+          <p class="section-subtitle">
+            Selecione o ano do mandato governamental para visualizar quais peças estão em fase de elaboração, os prazos legais constitucionais e as principais atenções da LRF.
+          </p>
+        </header>
+
+        <div class="simulator-box">
+          <!-- Botões de Seleção do Ano -->
+          <div class="simulator-controls" role="tablist" aria-label="Selecione o Ano do Mandato">
+            <button type="button" class="simulator-btn active" data-cycle="ano1" role="tab" aria-selected="true" aria-controls="sim-display">
+              <span class="simulator-btn-year">1º Ano do Mandato</span>
+              <span class="simulator-btn-subtitle">Criação do Novo PPA</span>
+            </button>
+            <button type="button" class="simulator-btn" data-cycle="ano2" role="tab" aria-selected="false" aria-controls="sim-display">
+              <span class="simulator-btn-year">2º Ano do Mandato</span>
+              <span class="simulator-btn-subtitle">Início da Vigência do PPA</span>
+            </button>
+            <button type="button" class="simulator-btn" data-cycle="ano3" role="tab" aria-selected="false" aria-controls="sim-display">
+              <span class="simulator-btn-year">3º Ano do Mandato</span>
+              <span class="simulator-btn-subtitle">Maturidade &amp; Investimentos</span>
+            </button>
+            <button type="button" class="simulator-btn" data-cycle="ano4" role="tab" aria-selected="false" aria-controls="sim-display">
+              <span class="simulator-btn-year">4º Ano do Mandato</span>
+              <span class="simulator-btn-subtitle">Transição &amp; Art. 42 LRF</span>
+            </button>
+          </div>
+
+          <!-- Display Dinâmico de Conteúdo do Ciclo -->
+          <div id="sim-display" class="simulator-display" role="tabpanel">
+            <div class="simulator-header-info">
+              <div>
+                <h3 id="sim-current-title" class="sim-current-title">1º Ano de Mandato Municipal</h3>
+                <p id="sim-current-desc" class="section-subtitle" style="font-size: 0.95rem; margin-top: 0.25rem;">
+                  Neste ano a administração executa o último ano da LOA da gestão anterior e elabora o novo Plano Plurianual (PPA) para os 4 anos subsequentes, além da LDO e da LOA.
+                </p>
+              </div>
+              <span id="sim-current-tag" class="sim-badge-action">Ano Chave: Construção Estratégica do PPA</span>
+            </div>
+
+            <div id="sim-cards-container" class="sim-content-grid">
+              <!-- Preenchido dinamicamente via script.js -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ----------------------------------------------------------------------
+         SEÇÃO METODOLOGIA DE TRABALHO
+         ---------------------------------------------------------------------- -->
+    <section id="metodologia" class="section section-dark" aria-labelledby="metodo-title">
+      <div class="container">
+        <header class="section-header">
+          <span class="tag-label tag-white">Nosso Método de Sucesso</span>
+          <h2 id="metodo-title" class="section-title">Como Apoiamos a Sua Administração em 4 Etapas</h2>
+          <p class="section-subtitle">
+            Metodologia consagrada que une rigor técnico, ciência de dados públicos e acompanhamento humanizado e presencial.
+          </p>
+        </header>
+
+        <div class="methodology-grid">
+          <div class="method-card">
+            <div class="method-step-num">01</div>
+            <h3 class="method-title">Diagnóstico Fiscal Inicial</h3>
+            <p class="method-desc">
+              Varredura completa das contas municipais, restos a pagar, contratos continuados, limites constitucionais e apuração da capacidade real de investimento do ente.
+            </p>
+          </div>
+
+          <div class="method-card">
+            <div class="method-step-num">02</div>
+            <h3 class="method-title">Modelagem Orçamentária</h3>
+            <p class="method-desc">
+              Construção técnica do PPA, LDO e LOA em linguagem clara, alinhando as promessas do Plano de Governo às classificações funcionais e fontes de recursos da STN.
+            </p>
+          </div>
+
+          <div class="method-card">
+            <div class="method-step-num">03</div>
+            <h3 class="method-title">Monitoramento &amp; BI</h3>
+            <p class="method-desc">
+              Acompanhamento mensal da execução, emissão de alertas precoces sobre limites de pessoal e arrecadação, além do suporte na confecção do RREO e RGF.
+            </p>
+          </div>
+
+          <div class="method-card">
+            <div class="method-step-num">04</div>
+            <h3 class="method-title">Prestação de Contas Segura</h3>
+            <p class="method-desc">
+              Instrução processual completa para o Tribunal de Contas (TCE/TCU), garantindo consistência documental, notas explicativas e defesas fundamentadas.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ----------------------------------------------------------------------
+         SEÇÃO FAQ (PERGUNTAS FREQUENTES COM DETAILS/SUMMARY NATIVO)
+         ---------------------------------------------------------------------- -->
+    <section id="faq" class="section section-alt" aria-labelledby="faq-title">
+      <div class="container">
+        <header class="section-header">
+          <span class="tag-label">Esclarecimentos Legais &amp; Fiscais</span>
+          <h2 id="faq-title" class="section-title">Perguntas Frequentes de Gestores Públicos</h2>
+          <p class="section-subtitle">
+            Dúvidas mais comuns enfrentadas por prefeitos, secretários de finanças e controladores internos sobre planejamento e orçamento.
+          </p>
+        </header>
+
+        <div class="faq-container">
+          <details class="faq-item">
+            <summary class="faq-summary">
+              <span>Qual é a diferença fundamental entre PPA, LDO e LOA?</span>
+              <svg class="faq-icon-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </summary>
+            <div class="faq-content">
+              <p>
+                O <strong>PPA (Plano Plurianual)</strong> é o instrumento de planejamento estratégico de médio prazo (4 anos) que define as diretrizes, objetivos e metas da administração pública. A <strong>LDO (Lei de Diretrizes Orçamentárias)</strong> atua como a ponte anual entre o PPA e a LOA, definindo as metas fiscais, prioridades e regras para a elaboração do orçamento. Já a <strong>LOA (Lei Orçamentária Anual)</strong> é o orçamento propriamente dito, que estima com precisão todas as receitas e fixa as despesas detalhadas para cada secretaria e programa no ano civil seguinte.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-summary">
+              <span>Por que o PPA é elaborado no 1º ano e vigora até o 1º ano da gestão seguinte?</span>
+              <svg class="faq-icon-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </summary>
+            <div class="faq-content">
+              <p>
+                Esse modelo, previsto no Artigo 165 da Constituição Federal, tem o objetivo de garantir o <strong>princípio da continuidade administrativa</strong>. Dessa forma, um novo prefeito não encontra a máquina pública desprovida de orçamento no seu primeiro ano, tendo tempo hábil para diagnosticar o município e desenhar com responsabilidade o seu próprio PPA para os 4 anos subsequentes.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-summary">
+              <span>Quais são os limites de Despesa com Pessoal impostos pela LRF aos Municípios?</span>
+              <svg class="faq-icon-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </summary>
+            <div class="faq-content">
+              <p>
+                O limite global para o município é de <strong>60% da Receita Corrente Líquida (RCL)</strong>, dividido em: <strong>54% para o Poder Executivo</strong> (Prefeitura) e <strong>6% para o Poder Legislativo</strong> (Câmara Municipal). A LRF estabelece ainda o Limite de Alerta (90% do teto) e o Limite Prudencial (95% do teto), momento em que ficam vedados reajustes, criação de cargos e contratação de horas extras.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-summary">
+              <span>O que veda o Artigo 42 da LRF no último ano de mandato do Prefeito?</span>
+              <svg class="faq-icon-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </summary>
+            <div class="faq-content">
+              <p>
+                O Artigo 42 veda expressamente ao titular de Poder contrair obrigação de despesa que não possa ser cumprida integralmente dentro dos dois últimos quadrimestres do mandato (a partir de 1º de maio), ou que tenha parcelas a serem pagas no exercício seguinte sem que haja suficiente disponibilidade de caixa. O descumprimento é uma das principais causas de reprovação de contas e inelegibilidade perante a Lei da Ficha Limpa.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-summary">
+              <span>Como a análise de dados (BI) apoia a tomada de decisões imediatas do Prefeito?</span>
+              <svg class="faq-icon-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </summary>
+            <div class="faq-content">
+              <p>
+                Nossos dashboards consolidam em gráficos simples e objetivos a situação em tempo real de cada fonte de receita e dotação orçamentária. O prefeito e os secretários conseguem saber instantaneamente qual secretaria está gastando mais rápido, qual a margem segura para novos investimentos e se haverá necessidade de contingenciamento antes do fechamento do bimestre, eliminando decisões baseadas em intuição.
+              </p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ----------------------------------------------------------------------
+         SEÇÃO DE CONTATO E SOLICITAÇÃO DE DIAGNÓSTICO FISCAL
+         ---------------------------------------------------------------------- -->
+    <section id="contato" class="section" aria-labelledby="contato-title">
+      <div class="container">
+        <div class="contact-grid">
+          <!-- Coluna Institucional / Informações -->
+          <div class="contact-info-panel">
+            <div>
+              <span class="tag-label">Fale com Nossos Consultores</span>
+              <h2 id="contato-title" class="section-title">Proteja Seu Mandato e Potencialize Seus Recursos Públicos</h2>
+              <p class="section-subtitle">
+                Solicite uma reunião técnica ou um pré-diagnóstico fiscal gratuito para o seu município ou autarquia. Atendemos todo o território nacional com discrição e excelência.
+              </p>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="contact-icon-box" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </div>
+              <div>
+                <h3 class="contact-info-title">Sede Operacional</h3>
+                <address class="contact-info-text">
+                  Setor Comercial e Governamental, Bloco B, Salas 601-604<br>
+                  Brasília - DF / Salvador - BA
+                </address>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="contact-icon-box" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="contact-info-title">Telefones Oficiais</h3>
+                <p class="contact-info-text">
+                  Gabinete de Atendimento: (0800) 772-2026<br>
+                  WhatsApp Plantão Técnico: (71) 99882-1400
+                </p>
+              </div>
+            </div>
+
+            <div class="contact-card-box">
+              <h4>Atendimento Especial a Gabinetes &amp; Secretarias</h4>
+              <p>
+                Disponibilizamos suporte presencial ou por videoconferência com emissão de parecer preliminar antes das datas limites de protocolo legislativo.
+              </p>
+            </div>
+          </div>
+
+          <!-- Formulário Semântico de Diagnóstico -->
+          <div class="contact-form-wrapper">
+            <form id="form-contato" novalidate aria-label="Formulário de Solicitação de Diagnóstico Fiscal">
+              <fieldset class="form-fieldset">
+                <legend class="form-legend">Solicitar Atendimento Especializado</legend>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="campo-nome" class="form-label">Nome Completo <span class="req" aria-hidden="true">*</span></label>
+                    <input type="text" id="campo-nome" name="nome" class="form-control" placeholder="Ex: Dr. Carlos Silva" required autocomplete="name">
+                  </div>
+                  <div class="form-group">
+                    <label for="campo-cargo" class="form-label">Cargo / Função <span class="req" aria-hidden="true">*</span></label>
+                    <select id="campo-cargo" name="cargo" class="form-control" required>
+                      <option value="">Selecione o seu cargo...</option>
+                      <option value="Prefeito(a)">Prefeito(a) ou Vice-Prefeito(a)</option>
+                      <option value="Secretário(a) de Finanças / Fazenda">Secretário(a) de Finanças / Fazenda</option>
+                      <option value="Secretário(a) de Planejamento / Gestão">Secretário(a) de Planejamento / Gestão</option>
+                      <option value="Controlador(a) Geral / Interno">Controlador(a) Geral / Interno</option>
+                      <option value="Contador(a) Público">Contador(a) Público</option>
+                      <option value="Procurador(a) Municipal">Procurador(a) Municipal</option>
+                      <option value="Presidente de Câmara / Vereador">Presidente de Câmara / Vereador</option>
+                      <option value="Outro">Outro Cargo Público</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="campo-orgao" class="form-label">Município / Órgão Público <span class="req" aria-hidden="true">*</span></label>
+                    <input type="text" id="campo-orgao" name="orgao" class="form-control" placeholder="Ex: Prefeitura de Salvador / BA" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="campo-telefone" class="form-label">Telefone Institucional / WhatsApp <span class="req" aria-hidden="true">*</span></label>
+                    <input type="tel" id="campo-telefone" name="telefone" class="form-control" placeholder="(00) 00000-0000" required autocomplete="tel">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="campo-email" class="form-label">E-mail Institucional Oficial <span class="req" aria-hidden="true">*</span></label>
+                  <input type="email" id="campo-email" name="email" class="form-control" placeholder="nome@municipio.gov.br" required autocomplete="email">
+                  <span class="form-help">Utilize preferencialmente o e-mail institucional do seu órgão público.</span>
+                </div>
+
+                <div class="form-group">
+                  <label for="campo-interesse" class="form-label">Serviço Principal de Interesse</label>
+                  <select id="campo-interesse" name="interesse" class="form-control">
+                    <option value="Elaboração de Peças (PPA, LDO e LOA)">Elaboração Completa de Peças (PPA, LDO e LOA)</option>
+                    <option value="Acompanhamento da Execução Orçamentária e Financeira">Acompanhamento da Execução Orçamentária e Financeira</option>
+                    <option value="Análise de Dados Fiscais e BI de Gestão">Análise de Dados Fiscais e BI de Gestão</option>
+                    <option value="Auditoria Preventiva de Limites e Restos a Pagar">Auditoria Preventiva de Limites e Restos a Pagar</option>
+                    <option value="Diagnóstico Fiscal Completo">Diagnóstico Fiscal Geral</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="campo-mensagem" class="form-label">Detalhes da Necessidade ou Desafio Atual</label>
+                  <textarea id="campo-mensagem" name="mensagem" class="form-control" placeholder="Descreva brevemente a situação orçamentária do órgão ou o prazo legislativo em curso..."></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                  </svg>
+                  Solicitar Diagnóstico Fiscal Personalizado
+                </button>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================================
+       RODAPÉ INSTITUCIONAL (FOOTER)
+       ======================================================================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-grid">
+      <!-- Coluna 1: Sobre & Marca -->
+      <div class="footer-col">
+        <a href="#inicio" class="logo" style="margin-bottom: 1rem;">
+          <div class="logo-icon" style="background: var(--surface-white); color: var(--primary-800);" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <path d="M3 21h18"></path>
+              <path d="M5 21V7l7-4 7 4v14"></path>
+              <path d="M9 10h1"></path>
+              <path d="M9 14h1"></path>
+              <path d="M9 18h1"></path>
+              <path d="M14 10h1"></path>
+              <path d="M14 14h1"></path>
+              <path d="M14 18h1"></path>
+            </svg>
+          </div>
+          <div class="logo-text">
+            <span class="logo-title" style="color: var(--surface-white);">SSA Consultoria e Planejamento Ltda</span>
+            <span class="logo-tagline" style="color: var(--primary-300);">Governança &amp; Inteligência Pública</span>
+          </div>
+        </a>
+        <p class="footer-desc">
+          Empresa dedicada exclusivamente à excelência na assessoria técnica e estratégica para a Administração Pública municipal, estadual e consórcios intermunicipais.
+        </p>
+      </div>
+
+      <!-- Coluna 2: Navegação Rápida -->
+      <div class="footer-col">
+        <h4>Navegação</h4>
+        <ul class="footer-links">
+          <li><a href="#inicio">Página Inicial</a></li>
+          <li><a href="#sobre">Sobre a Empresa</a></li>
+          <li><a href="#servicos">Nossos Serviços</a></li>
+          <li><a href="#ciclo-orcamentario">Ciclo Orçamentário</a></li>
+          <li><a href="#metodologia">Metodologia</a></li>
+          <li><a href="#faq">Perguntas Frequentes</a></li>
+        </ul>
+      </div>
+
+      <!-- Coluna 3: Peças & Normas Legais -->
+      <div class="footer-col">
+        <h4>Base Legal &amp; Peças</h4>
+        <ul class="footer-links">
+          <li><a href="#servicos">PPA (Plano Plurianual)</a></li>
+          <li><a href="#servicos">LDO (Diretrizes Orçamentárias)</a></li>
+          <li><a href="#servicos">LOA (Orçamento Anual)</a></li>
+          <li><a href="#servicos">Lei de Resp. Fiscal (LC 101/00)</a></li>
+          <li><a href="#servicos">Manual de Contabilidade (MCASP)</a></li>
+          <li><a href="#servicos">Audiências Públicas</a></li>
+        </ul>
+      </div>
+
+      <!-- Coluna 4: Contato & Atendimento -->
+      <div class="footer-col">
+        <h4>Canais Oficiais</h4>
+        <div class="footer-contact-list">
+          <div class="footer-contact-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+            <span>0800 000-2026 / (xx) xxxxx-xx00</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            <span>contato@ssagestaopublica.com.br</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+            <span>Seg a Sex: 08h às 18h (Plantão aos fins de exercício)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Barra de Direitos e Compliance -->
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2026 SSA Gestão &amp; Governança Pública. Todos os direitos reservados. CNPJ: 00.000.000/0001-00.</p>
+        <p>Desenvolvido em conformidade com as diretrizes de Acessibilidade Web (e-MAG / WCAG 2.1) e LGPD.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       MODAL NATIVO ACCESSIBLE (<dialog>) DE CONFIRMAÇÃO DE ENVIO
+       ======================================================================== -->
+  <dialog id="modal-sucesso" class="feedback-modal" aria-labelledby="modal-titulo">
+    <div class="modal-icon" aria-hidden="true">
+      <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+      </svg>
+    </div>
+    <h3 id="modal-titulo" class="modal-title">Diagnóstico Solicitado com Sucesso!</h3>
+    <p class="modal-text">
+      Obrigado pelo contato. Nossa equipe especializada em planejamento e gestão fiscal entrará em contato em até 24 horas úteis com o seu diagnóstico preliminar.
+    </p>
+    <button type="button" id="btn-fechar-modal" class="btn btn-primary btn-block">
+      Continuar Navegando
+    </button>
+  </dialog>
+
+  <!-- Botão Flutuante Voltar ao Topo -->
+  <button type="button" class="back-to-top" aria-label="Voltar ao início da página">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- Script Interativo -->
+  <script src="script.js" defer></script>
+</body>
+</html>
